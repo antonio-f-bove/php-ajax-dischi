@@ -17,10 +17,11 @@
       <select v-model="genre" @change="fetchData">
         <option disabled value="">Select genre</option>
         <option v-if="genre">All</option>
-        <option>Jazz</option>
+        <option v-for="g in genresList">{{ g }}</option>
+        <!-- <option>Jazz</option>
         <option>Metal</option>
         <option>Pop</option>
-        <option>Rock</option>
+        <option>Rock</option> -->
       </select>
     </header>
 

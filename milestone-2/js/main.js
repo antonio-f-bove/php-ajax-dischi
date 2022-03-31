@@ -2,6 +2,7 @@ const app = new Vue ({
   el: '#app',
   data: {
     albums: [],
+    genresList: [],
     genre: '',
   },
   methods: {
@@ -14,8 +15,15 @@ const app = new Vue ({
         })
         .then(res => {
           this.albums = res.data;
+          this.getGenres();
         })
     },
+    getGenres() {
+      const genres = this.albums.map(a => a.genre);
+      genres.forEach(genre => {
+        if(!this.genresList.includes(genre)) this.genresList.push(genre);
+      })
+    }
   }, 
   created() {
     this.fetchData();
