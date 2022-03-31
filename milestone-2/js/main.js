@@ -15,9 +15,9 @@ const app = new Vue ({
         .then(res => {
           this.albums = res.data;
         })
-    }
+    },
   }, 
   created() {
     this.fetchData();
-  }
+  },
 })
