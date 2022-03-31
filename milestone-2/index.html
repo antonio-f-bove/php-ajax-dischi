@@ -13,6 +13,16 @@
 <body>
 
   <div id="app">
+    <header>
+      <select v-model="genre" @change="fetchData">
+        <option disabled value="">Select genre</option>
+        <option>Jazz</option>
+        <option>Metal</option>
+        <option>Pop</option>
+        <option>Rock</option>
+      </select>
+      <span style="color: #fff">{{ genre }}</span>
+    </header>
 
     <div class="container">
       <div class="flex-row">
