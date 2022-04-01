@@ -18,7 +18,7 @@ $filter = isset($_GET['genre']) ? $_GET['genre'] : '';
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 
-if ($filter != '' && $filter != "All") {
+if ($filter != '') {
   $albums = filterAlbums($albums, $filter);
 }
 
